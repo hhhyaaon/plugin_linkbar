@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="js/jquery-1.7.2.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/linkbar.css">
+    <script type="text/javascript" src="js/linkbar.js"></script>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        font: 16px normal 'Microsoft YaHei';
+    }
+    
+    body {
+        width: 90%;
+        border: 1px solid;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+    </style>
+    <script type="text/javascript">
+    $(function() {
+
+        var ctns = [
+            //item1
+            "测试内容1",
+            //item2
+            "<div>测试内容2</div><div>测试内容2</div><div>测试内容2</div><div>测试内容2</div><div style = 'background-color: rgb(233,234,162);height:300px;'> </div>",
+            //item3
+            "<div>测试内容3</div><div>测试内容3</div><div>测试内容3</div><div>测试内容3</div>",
+            //item4
+            "<div>测试内容4</div><div>测试内容4</div><div style = 'background-color: rgb(233,234,162);height:400px;width:200px'> </div>",
+            //item5
+            $("<div>").text("测试内容5"),
+            //item6
+            $("<div>").append($("<p>").text("测试内容6")).append($("<p>").text("测试内容6")).append($("<p>").text("测试内容6"))
+        ];
+
+        //instance plug
+        var linkBar = new window.hy.linkBar({
+            element: $(".box"),
+            contents: ctns
+        });
+        console.log(linkBar);
+
+    });
+    </script>
+</head>
+
+<body>
+    <div class="box"></div>
+    <br/>
+</body>
+
+</html>
