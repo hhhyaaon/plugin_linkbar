@@ -2,7 +2,7 @@ $(function() {
 
     window.hy = window.hy || {};
 
-    window.hy.linkBar = function baidu(config) {
+    window.hy.linkBar = function linkBar(config) {
         var cfg = $.extend(true, {
             //plug wapper
             element: $("<div>"),
@@ -121,7 +121,7 @@ $(function() {
                 $(ele).css("visibility", isDspLinkShow ? "hidden" : "visible");
 
                 //todo hide dspLink
-                //$links.outerHeight(true) > $end.get(0).getBoundingClientRect().top ? $links.hide() : $links.show();
+                $links.outerHeight(true) > $end.get(0).getBoundingClientRect().top ? $links.hide() : $links.show();
             });
         }
 
